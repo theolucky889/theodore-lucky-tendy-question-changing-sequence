@@ -2,13 +2,13 @@ def find_changing_point(arr):
     if not arr or len(arr) < 3:
         return -1 # less than 3 elements cannot change trend
 
-    increasing = arr[1] > arr[0]
+    increasing = arr[1] > arr[0] # initial trend
         
     for i in range(1, len(arr) - 1):
         if increasing and arr[i] > arr[i + 1]:
             return i
         elif not increasing and arr[i] < arr[i + 1]:
-            return i
+            return i # update when trend is change
     
     trend = arr[i] > arr[i - 1]
     
