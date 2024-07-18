@@ -1,6 +1,6 @@
 def find_changing_point(arr):
-    if len(arr) < 2:
-        return -1 # less than 2 elements cannot change trend
+    if len(arr) < 3:
+        return -1 # less than 3 elements cannot change trend
 
     for i in range(1, len(arr)):
         if arr[i] != arr[i - 1]:
