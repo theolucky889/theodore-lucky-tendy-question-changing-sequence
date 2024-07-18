@@ -14,7 +14,7 @@ def find_changing_point(arr):
     
     trend = arr[i] > arr[i - 1]
     
-    for j in range (i  + 1, len(arr)):
+    for j in range (i + 1, len(arr)):
         if (trend and arr[j] < arr[j - 1]) or (not trend and arr[j] > arr[j - 1]):
             return j - 1
         return 1
